@@ -26,11 +26,10 @@ import m7lib
 
 try:
     # Python 3
-    from urllib.parse import urlparse
     from urllib.parse import parse_qs
 except ImportError:
     # Python 2
-    import urlparse
+    from urlparse import parse_qs
 
 dlg = xbmcgui.Dialog()
 addon = xbmcaddon.Addon()
@@ -83,12 +82,7 @@ def get_string(string_id):
 
 
 def parse_query(query, clean=True):
-    try:
-        # Python 3
-        queries = parse_qs(query)
-    except:
-        # Python 2
-        queries = urlparse.parse_qs(query)
+    queries = parse_qs(query)
 
     q = {}
     for key, value in queries.items():
