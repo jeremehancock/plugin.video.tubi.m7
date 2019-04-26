@@ -31,6 +31,7 @@ class Channels:
     def section_list():
         icon = ""
         try:
+            m7lib.Common.add_section("tubitv-search", addon_icon, fanart, "Search Tubi")
             section_list = m7lib.Stream.get_tubi_tv_categories()
             for category in section_list:
                 if category["icon"] == "none":
@@ -63,6 +64,29 @@ class Channels:
             episode_list = m7lib.Stream.get_tubi_tv_episodes(show)
             for entry in episode_list:
                 m7lib.Common.add_channel(entry["id"] + "play-tubitv", entry["icon"], fanart, entry["title"], live=False)
+        except StandardError:
+            dlg_oops(addon_name)
+
+    @staticmethod
+    def search_tubi():
+        try:
+            retval = dlg.input(get_string(9007), type=xbmcgui.INPUT_ALPHANUM)
+            if retval and len(retval) > 0:
+                search_list = m7lib.Stream.get_tubi_tv_search(retval)
+                if len(search_list) > 1:
+                    for entry in search_list:
+                        if entry["type"] == "v":
+                            m7lib.Common.add_channel(entry["id"] + "play-tubitv", entry["icon"], fanart, entry["title"],
+                                                     live=False)
+
+                        elif entry["type"] == "s":
+                            m7lib.Common.add_section(entry["id"] + "tubitv-episodes", entry["icon"], fanart, entry["title"])
+                else:
+                    dlg.ok(addon_name, get_string(9008))
+                    exit()
+            else:
+                dlg.ok(addon_name, get_string(9009))
+                exit()
         except StandardError:
             dlg_oops(addon_name)
 

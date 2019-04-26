@@ -38,6 +38,18 @@ msgctxt "#9006"
 msgid "Oops something went wrong."
 msgstr ""
 
+msgctxt "#9007"
+msgid "Search Tubi"
+msgstr ""
+
+msgctxt "#9008"
+msgid "No results."
+msgstr ""
+
+msgctxt "#9009"
+msgid "Please enter something to search for."
+msgstr ""
+
 msgctxt "#10000"
 msgid "Information"
 msgstr ""

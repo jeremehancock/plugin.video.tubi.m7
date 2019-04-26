@@ -39,4 +39,7 @@ elif "tubitv-episodes" in mode:
 elif "play-tubitv" in mode:
     Channels.play_tubi(mode)
 
+elif mode == "tubitv-search":
+    Channels.search_tubi()
+
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

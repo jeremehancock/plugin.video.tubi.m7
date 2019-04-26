@@ -37,7 +37,7 @@ addon_name = addon.getAddonInfo('name')
 addon_id = addon.getAddonInfo('id')
 plugin_path = xbmcaddon.Addon(id=addon_id).getAddonInfo('path')
 tvaddons_logo = xbmc.translatePath(os.path.join(plugin_path, 'resources', 'images', 'tvaddons_logo.png'))
-icon = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
+addon_icon = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 fanart = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 
 class Tubi:
