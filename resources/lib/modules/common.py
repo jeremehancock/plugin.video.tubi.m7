@@ -51,7 +51,7 @@ def location_check():
         url = "http://ip-api.com/json/"
         req = m7lib.Common.open_url(url)
         country_code = json.loads(req)["countryCode"]
-    except:
+    except StandardError:
         country_code = "US"
     return country_code
 
