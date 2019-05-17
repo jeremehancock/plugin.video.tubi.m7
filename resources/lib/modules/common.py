@@ -94,4 +94,3 @@ def parse_query(query, clean=True):
     if clean:
         q['mode'] = q.get('mode', 'main')
     return q
-
