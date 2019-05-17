@@ -40,15 +40,19 @@ tvaddons_logo = xbmc.translatePath(os.path.join(plugin_path, 'resources', 'image
 addon_icon = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 fanart = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 
+
 class Tubi:
     def __init__(self):
         self.plugin_queries = parse_query(sys.argv[2][1:])
 
 
 def location_check():
-    url = "http://ip-api.com/json/"
-    req = m7lib.Common.open_url(url)
-    country_code = json.loads(req)["countryCode"]
+    try:
+        url = "http://ip-api.com/json/"
+        req = m7lib.Common.open_url(url)
+        country_code = json.loads(req)["countryCode"]
+    except:
+        country_code = "US"
     return country_code
 
 
