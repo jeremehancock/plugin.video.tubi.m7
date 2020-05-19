@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: TVADDONS Addons\n"
+"Project-Id-Version: m7kodi.dev Addons\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: \n"
@@ -15,23 +15,23 @@ msgid "This addon doesn't have any configuration options."
 msgstr ""
 
 msgctxt "#9001"
-msgid "Should you require any assistance, feel free to visit"
+msgid "Please consider supporting the development of Tubi."
 msgstr ""
 
 msgctxt "#9002"
-msgid "[COLOR lightskyblue]https://www.tvaddons.co/forums[/COLOR] for addon support."
+msgid "[COLOR lightskyblue]https://patreon.m7kodi.dev[/COLOR]"
 msgstr ""
 
 msgctxt "#9003"
-msgid "www.tvaddons.co"
+msgid "patreon.m7kodi.dev"
 msgstr ""
 
 msgctxt "#9004"
-msgid "Tubi is provided by:"
+msgid "Support Tubi:"
 msgstr ""
 
 msgctxt "#9005"
-msgid "Tubi is not available outside the US. Still want to watch? Try out a VPN service. Sign up: [COLOR lightskyblue]www.tvaddons.co/vpn[/COLOR]"
+msgid "Tubi is not available outside the US. Still want to watch? Try out a VPN service.[/COLOR]"
 msgstr ""
 
 msgctxt "#9006"

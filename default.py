@@ -1,6 +1,7 @@
 """
     Tubi Add-on
     Developed by mhancoc7
+    https://patreon.m7kodi.dev
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -27,7 +28,7 @@ if location_check() != "US":
     exit()
 
 if mode is "main":
-    tvaddons_branding()
+    patreon_notify()
     Channels.section_list()
 
 elif "tubitv-content" in mode:

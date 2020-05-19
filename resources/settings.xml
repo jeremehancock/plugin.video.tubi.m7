@@ -6,5 +6,5 @@
         <setting type="text" label="9001"/>
         <setting type="text" label="9002"/>
     </category>
-    <setting id="branding_notify" default="0" visible="false"/>
+    <setting id="patreon_notify" default="0" visible="false"/>
 </settings>

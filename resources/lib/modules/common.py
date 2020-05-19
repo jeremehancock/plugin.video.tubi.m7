@@ -1,6 +1,7 @@
 """
-    Tubi Add-on Add-on
+    Tubi Add-on
     Developed by mhancoc7
+    https://patreon.m7kodi.dev
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,7 +37,7 @@ addon = xbmcaddon.Addon()
 addon_name = addon.getAddonInfo('name')
 addon_id = addon.getAddonInfo('id')
 plugin_path = xbmcaddon.Addon(id=addon_id).getAddonInfo('path')
-tvaddons_logo = xbmc.translatePath(os.path.join(plugin_path, 'resources', 'images', 'tvaddons_logo.png'))
+patreon_logo = xbmc.translatePath(os.path.join(plugin_path, 'resources', 'images', 'patreon.jpg'))
 addon_icon = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 fanart = xbmc.translatePath(os.path.join(plugin_path, 'icon.png'))
 
@@ -61,16 +62,16 @@ def dlg_oops(heading):
     exit()
 
 
-def tvaddons_branding():
-    # TVADDONS Branding
-    if len(get_setting('branding_notify')) > 0:
-        set_setting('branding_notify', str(int(get_setting('branding_notify')) + 1))
+def patreon_notify():
+    # Display Patreon Reminder
+    if len(get_setting('patreon_notify')) > 0:
+        set_setting('patreon_notify', str(int(get_setting('patreon_notify')) + 1))
     else:
-        set_setting('branding_notify', "1")
-    if int(get_setting('branding_notify')) == 1:
-        dlg.notification(get_string(9004), get_string(9003), tvaddons_logo, 5000, False)
-    elif int(get_setting('branding_notify')) == 9:
-        set_setting('branding_notify', "0")
+        set_setting('patreon_notify', "1")
+    if int(get_setting('patreon_notify')) == 1:
+        dlg.notification(get_string(9004), get_string(9003), patreon_logo, 5000, False)
+    elif int(get_setting('patreon_notify')) == 5:
+        set_setting('patreon_notify', "0")
 
 
 def get_setting(setting):
