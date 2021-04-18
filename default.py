@@ -27,7 +27,7 @@ if location_check() != "US":
     dlg.ok(addon_name, get_string(9005))
     exit()
 
-if mode is "main":
+if mode == "main":
     patreon_notify()
     Channels.section_list()
 

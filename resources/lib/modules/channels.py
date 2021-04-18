@@ -40,7 +40,7 @@ class Channels:
                 else:
                     icon = category["icon"]
                 m7lib.Common.add_section(category["id"] + "tubitv-content", icon, fanart, category["title"])
-        except StandardError:
+        except SyntaxError:
             dlg_oops(addon_name)
 
     @staticmethod
@@ -55,7 +55,7 @@ class Channels:
 
                 elif entry["type"] == "s":
                     m7lib.Common.add_section(entry["id"] + "tubitv-episodes", entry["icon"], fanart, entry["title"])
-        except StandardError:
+        except SyntaxError:
             dlg_oops(addon_name)
 
     @staticmethod
@@ -65,7 +65,7 @@ class Channels:
             episode_list = m7lib.Stream.get_tubi_tv_episodes(show)
             for entry in episode_list:
                 m7lib.Common.add_channel(entry["id"] + "play-tubitv", entry["icon"], fanart, entry["title"], live=False)
-        except StandardError:
+        except SyntaxError:
             dlg_oops(addon_name)
 
     @staticmethod
@@ -88,7 +88,7 @@ class Channels:
             else:
                 dlg.ok(addon_name, get_string(9009))
                 exit()
-        except StandardError:
+        except SyntaxError:
             dlg_oops(addon_name)
 
     @staticmethod
@@ -97,5 +97,5 @@ class Channels:
             stream_id = mode.split('play-tubitv')[0]
             stream = m7lib.Stream.get_tubi_tv_stream(stream_id)
             m7lib.Common.play(stream)
-        except StandardError:
+        except SyntaxError:
             dlg_oops(addon_name)
